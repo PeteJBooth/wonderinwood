@@ -1,0 +1,63 @@
+# Python bytecode:
+*.py[co]
+
+# Packaging files:
+*.egg*
+
+# Editor temp files:
+*.swp
+*~
+.~lock.*.*
+
+# Sphinx docs:
+_build
+
+# SQLite3 database files:
+*.db
+
+# Logs:
+log/*.log
+
+# Ignore sass-cache files.
+*.sass-cache*
+
+# Common IDEs
+.idea/
+.buildpath
+.project
+.pydevproject
+.settings
+atlassian-ide-plugin.xml
+
+# Ruby/Node Stuff
+Gemfile.lock
+node_modules
+
+# Operating system files.
+.DS_Store
+
+# Sublime caches
+*.sublime*
+
+# Compiled static and HTML
+*/static/
+*/app/templates/min/
+
+# Ignore user-uploaded media files.
+*/media/ # Amend this if media files are not under /media/
+
+# JSDoc
+**/out/*
+
+# Bower components
+static_src/bower_components/**/*
+
+# SASSDoc
+*/static_src/sass/docs/**/*
+
+# SVG sprite generated files
+*/static_src/img/svgs/sprite.css
+*/static_src/img/svgs/sprite.html
+*/static_src/img/svgs/sprite.inline.svg
+*/app/templates/includes/svgs/sprite.inline.html
+*/app/templates/includes/svgs/sprite/sprite.html
