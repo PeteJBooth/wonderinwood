@@ -343,6 +343,11 @@ class BaseSettings(Configuration):
         },
     }
 
+    OSCAR_SHOP_NAME = "Wonder in Wood"
+    OSCAR_SHOP_TAGLINE = "The German Christmas Shop"
+    OSCAR_PRODUCTS_PER_PAGE = 6
+    OSCAR_ALLOW_ANON_CHECKOUT = True
+
 
 class DevSettings(BaseSettings):
     """Override base settings with defaults suitable for a development"
