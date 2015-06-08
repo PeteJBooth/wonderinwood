@@ -95,8 +95,7 @@ compiledmessages:
 css:
 	# Compile CSS files from LESS
 	lessc --source-map --source-map-less-inline app/static/oscar/less/styles.less app/static/oscar/css/styles.css
-	lessc --source-map --source-map-less-inline app/static/oscar/less/responsive.less app/static/oscar/css/responsive.css
-	lessc --source-map --source-map-less-inline app/static/oscar/less/dashboard.less sappstatic/oscar/css/dashboard.css
+	lessc --source-map --source-map-less-inline app/static/oscar/less/dashboard.less app/static/oscar/css/dashboard.css
 
 clean:
 	# Remove files not in source control
