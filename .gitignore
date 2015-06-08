@@ -40,7 +40,6 @@ node_modules
 *.sublime*
 
 # Compiled static and HTML
-*/static/
 */app/templates/min/
 
 # Ignore user-uploaded media files.
