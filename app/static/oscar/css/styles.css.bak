@@ -5924,7 +5924,6 @@ input[type="submit"].btn.btn-mini {
   margin-bottom: 20px;
   *position: relative;
   *z-index: 2;
-  padding: 0 20px;
 }
 .navbar-inner {
   min-height: 40px;
@@ -6094,11 +6093,6 @@ input[type="submit"].btn.btn-mini {
   -moz-border-radius: 0;
   border-radius: 0;
 }
-.navbar-static-top .container,
-.navbar-fixed-top .container,
-.navbar-fixed-bottom .container {
-  width: 940px;
-}
 .navbar-fixed-top {
   top: 0;
 }
@@ -6122,38 +6116,6 @@ input[type="submit"].btn.btn-mini {
   display: block;
   float: left;
   margin: 0 10px 0 0;
-  background-color: #ffffff;
-  border-top: 1px solid #d6c78c;
-  border-bottom: 1px solid #d6c78c;
-  width: 100%;
-}
-.navbar .nav li {
-  width: 16.66666667%;
-}
-.navbar .nav li > a > span.iconography {
-  background-repeat: no-repeat;
-  display: inline-block;
-  margin: 0 5px;
-  width: 30px;
-  height: 30px;
-}
-.navbar .nav li > a.nav-home > span.iconography {
-  background: url('/static/img/sprite.png') 0px 0px;
-}
-.navbar .nav li > a.nav-store > span.iconography {
-  background: url('/static/img/sprite.png') 0px -30px;
-}
-.navbar .nav li > a.nav-about > span.iconography {
-  background: url('/static/img/sprite.png') 0px -60px;
-}
-.navbar .nav li > a.nav-contact > span.iconography {
-  background: url('/static/img/sprite.png') 0px -90px;
-}
-.navbar .nav li > a.nav-search > span.iconography {
-  background: url('/static/img/sprite.png') 0px -120px;
-}
-.navbar .nav li > a.nav-basket > span.iconography {
-  background: url('/static/img/sprite.png') 0px -150px;
 }
 .navbar .nav.pull-right {
   float: right;
@@ -7501,6 +7463,7 @@ body {
 .container-fluid {
   padding: 0px;
   margin: 0px auto;
+  max-width: 1280px;
 }
 .row-fluid {
   -webkit-box-sizing: border-box;
@@ -7673,20 +7636,13 @@ form.flat {
 }
 .navbar-static-top.navbar .nav > li > a {
   padding: 10px 15px;
-  vertical-align: top;
 }
 .header {
   position: relative;
   z-index: 2;
 }
 .header .page_inner {
-  padding: 20px 0 20px;
-  background-color: #ffffff;
-}
-.header .page_inner a#logo {
-  display: block;
-  margin: 0 auto;
-  width: 215px;
+  padding: 50px 0 40px;
 }
 .header h1 {
   line-height: inherit;
@@ -7788,13 +7744,13 @@ ul.row-fluid {
 }
 .image_container {
   width: 100%;
-  min-height: 165px;
+  min-height: 235px;
   overflow: hidden;
   text-align: center;
   position: relative;
 }
 .image_container img {
-  max-height: 155px;
+  max-height: 225px;
   max-width: 90%;
   width: auto;
   margin: 0px auto;
@@ -8199,4 +8155,3 @@ input[type="number"][id*="quantity"] {
 .affix {
   position: fixed;
 }
-/*# sourceMappingURL=styles.css.map */
