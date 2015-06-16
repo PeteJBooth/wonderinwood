@@ -4,26 +4,21 @@
 {% load i18n %}
 {% load staticfiles %}
 
-<article class="well promotion_single span4">
-    <div class="sub-header">
-        <h2>{{ promotion.name }}</h2>
-    </div>
-    <div class="row">
-        <div class="col-sm-3">
-            <div class="image_container">
-                {% with image=product.primary_image %}
-                    {% thumbnail image.original "400x400" upscale=True crop='center' as thumb %}
-                        <a href="{{ product.get_absolute_url }}"><img class="thumbnail" src="{{ thumb.url }}" alt="{{ product.get_title }}"></a>
-                    {% endthumbnail %}
-                {% endwith %}
-            </div>
-        </div>
-        <div class="col-sm-9">
+{% with image=product.primary_image %}
+    {% thumbnail image.original "690x236" upscale=True crop='center' as thumb %}
+    <article class="promotion_single span4" style="background-image:url('{{ thumb.url }}')">
+        <!--<div class="sub-header">
+            <h2>{{ promotion.name }}</h2>
+        </div>-->
+        <!--<div class="col-sm-9">
             <h3><a href="{{ product.get_absolute_url }}">{{ product.title }}</a></h3>
             <div class="product_price">
                 {% include "catalogue/partials/stock_record.html" %}
             </div>
             {{ promotion.description|safe }}
-        </div>
-    </div>
-</article>
+            
+        </div>-->
+        <a href="{{ product.get_absolute_url }}" class="find-out-more">FIND OUT MORE<span class="arrow"></span></a>
+    </article>
+    {% endthumbnail %}
+{% endwith %}
