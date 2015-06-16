@@ -7,18 +7,10 @@
 {% with image=product.primary_image %}
     {% thumbnail image.original "690x236" upscale=True crop='center' as thumb %}
     <article class="promotion_single span4" style="background-image:url('{{ thumb.url }}')">
-        <!--<div class="sub-header">
-            <h2>{{ promotion.name }}</h2>
-        </div>-->
-        <!--<div class="col-sm-9">
-            <h3><a href="{{ product.get_absolute_url }}">{{ product.title }}</a></h3>
-            <div class="product_price">
-                {% include "catalogue/partials/stock_record.html" %}
-            </div>
-            {{ promotion.description|safe }}
-            
-        </div>-->
+        <div class="overlay">
+        {{ promotion.description|safe }}
         <a href="{{ product.get_absolute_url }}" class="find-out-more">FIND OUT MORE<span class="arrow"></span></a>
+        </div>
     </article>
     {% endthumbnail %}
 {% endwith %}

@@ -61,31 +61,47 @@
 }
 
 .promotion_single {
+  position: relative;
   height: 236px;
   margin-bottom: 20px;
   background-size:cover;
   background-position:center center;
 
-  a.find-out-more {
+  .overlay {
+    padding:10px 5%;
+    margin:0px;
+    position: absolute;
     color:#ffffff;
-    background-color: #ae911c;
-    font-weight:bold;
-    display: inline-block;
-    height: 12px;
-    padding:6px 70px 14px 10px;
-    position:relative;
-    top: 193px;
-    left:10px;
+    font-size: 14px;
+    width: 90%;
+    height: 216px;
+    background-color: rgba(73,73,73,0.7);
+    opacity: 0; //hide by default
+    .transition(0.5s);
 
-    .arrow{
-        display: block;
-        position: absolute;
-        right:3px;
-        top: 5px;
-        width: 23px;
-        height: 23px;
-        background: url('/static/img/sprite.png') 0px -@iconography-size*6;
+    a.find-out-more {
+      color:#ffffff;
+      background-color: #ae911c;
+      font-weight:bold;
+      display: inline-block;
+      height: 12px;
+      padding:6px 70px 14px 10px;
+      position:absolute;
+      bottom: 14px;
+
+      .arrow{
+          display: block;
+          position: absolute;
+          right:3px;
+          top: 5px;
+          width: 23px;
+          height: 23px;
+          background: url('/static/img/sprite.png') 0px -@iconography-size*6;
+      }
     }
+  }
+  .overlay:hover{
+    opacity: 1;
   }
 }
 //EB Garamound and open sans - google web fonts
