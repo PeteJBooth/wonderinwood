@@ -1,5 +1,6 @@
 @iconography-offset: 6px;
 @iconography-size: 23px;
+@payments-size: 40px;
 
 .red-bars {
     border-top: 1px solid @deepred;
@@ -66,18 +67,21 @@
   margin-bottom: 20px;
   background-size:cover;
   background-position:center center;
+  overflow: hidden;
 
   .overlay {
     padding:10px 5%;
-    margin:0px;
+    margin:236px 0 0 0;
     position: absolute;
+    top:0px;
     color:#ffffff;
     font-size: 14px;
     width: 90%;
     height: 216px;
     background-color: rgba(73,73,73,0.7);
-    opacity: 0; //hide by default
-    .transition(0.5s);
+    //opacity: 0; //hide by default
+    .transition(500ms);
+    .transition-property(top);
 
     a.find-out-more {
       color:#ffffff;
@@ -100,8 +104,8 @@
       }
     }
   }
-  .overlay:hover{
-    opacity: 1;
+  &:hover .overlay{
+    top:-236px;
   }
 }
 //EB Garamound and open sans - google web fonts
@@ -116,8 +120,41 @@
   .hero-callout{
     height:310px;
     width: 30%;
-    background-color: #ffffff;
-    .opacity(80);
+    background-color: rgba(255,255,255,0.8);
     margin:20px
+  }
+}
+
+
+//Footer
+#footer { 
+  background-color: #eeeeee;
+
+  #footer-payments {
+    li {
+      &:first-child { min-width: 170px}
+      &:last-child { border: none}
+      background-color: #eeeeee;
+      border-right: 2px solid #909090;
+      box-sizing: border-box;
+      min-width: 70px;
+      text-align: center;
+      width: 95%/6;
+
+      div.imagery {
+        
+        height: 40px;
+        display: inline-block;
+        width: 60px;
+
+        &.worldpay {background: url('/static/img/sprite.png') -40px 0px; width: 157px;}
+        &.maestro {background: url('/static/img/sprite.png') -40px -@payments-size;}
+        &.mastercard {background: url('/static/img/sprite.png') -40px -@payments-size*2;}
+        &.visa {background: url('/static/img/sprite.png') -40px -@payments-size*3;}
+        &.visadebit {background: url('/static/img/sprite.png') -40px -@payments-size*4;}
+        &.jcb {background: url('/static/img/sprite.png') -40px -@payments-size*5;}
+      }
+    }
+    
   }
 }

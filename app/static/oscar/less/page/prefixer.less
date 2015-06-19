@@ -281,16 +281,6 @@
 }
 
 
-// Opacity
-
-.opacity(@factor) {
-    @iefactor: @factor*100;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@{iefactor})";
-    filter: ~"alpha(opacity=(@{iefactor}))";
-    opacity: @factor;
-}
-
-
 // Text Shadow
 
 .text-shadow(@args) {

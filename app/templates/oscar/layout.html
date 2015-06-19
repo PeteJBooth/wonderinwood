@@ -20,15 +20,13 @@
 
 {% block layout %}
     {# Top-horizontal bar with account, notifictions, dashboard links #}
-    {% include "partials/nav_accounts.html" %}
+    {% comment %}{% include "partials/nav_accounts.html" %}{% endcomment %}
 
     {# Site logo/title, mini-basket, browse dropdown and searchbox #}
     <header class="header container-fluid">
         <div class="page_inner">
             <div class="row">
                 {% include "partials/brand.html" %}
-                {# Mini-basket wrapped in a block so some templates can now display it #}
-                {% block mini_basket %}{% include "partials/mini_basket.html" %}{% endblock %}
             </div>
         </div>
         {% block navigation %}
@@ -37,8 +35,8 @@
     </header>
 
     {# Main content of page - other layout templates may override this block #}
-    {% block content_wrapper %}
-        <div class="row-fluid page">
+    <div class="page">
+        {% block content_wrapper %}
             <div class="page_inner">
                 {% block breadcrumbs %}{% endblock %}
                 {% block header %}
@@ -62,10 +60,11 @@
                     <div id="content_inner">{% block content %}{% endblock %}</div>
                 </div>
             </div>
-        </div>
-    {% endblock %}
+        {% endblock %}
+        {% include "partials/footer.html" %}
+    </div>
 
-    {% include "partials/footer.html" %}
+    
 {% endblock %}
 
 {# Local scripts #}
