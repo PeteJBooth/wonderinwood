@@ -19,40 +19,35 @@
     float: left;
     width: 100% /6;
     list-style: none;
-    a {
-      float: none;
+    a.iconography {
+      box-sizing: border-box;
+      display: inline-block;
       // Vertically center the text given @navbarHeight
       padding: ((@navbarHeight - @baseLineHeight) / 2) 15px ((@navbarHeight - @baseLineHeight) / 2);
       color: @navbarLinkColor;
       text-decoration: none;
       text-shadow: 0 1px 0 @navbarBackgroundHighlight;
+      height: 23px;
+      width: 23px;
+      position: relative;
+      top: 7px;
     }
-    & > a > span.iconography {
-      background-repeat: no-repeat;
-      display:inline-block;
-      margin: 10px 5px 0 5px;
-      padding: 0 0 0 28px;
-      width:100%;
-      height:22px;
-      text-align:left;
-
-    }
-    & > a.nav-home > span.iconography {
+    & > a.nav-home{
       background: url('/static/img/sprite.png') 0px 0px;
     }
-    & > a.nav-store > span.iconography {
+    & > a.nav-store {
       background: url('/static/img/sprite.png') 0px -@iconography-size;
     }
-    & > a.nav-about > span.iconography {
+    & > a.nav-about {
       background: url('/static/img/sprite.png') 0px -@iconography-size*2;
     }
-    & > a.nav-contact > span.iconography {
+    & > a.nav-contact {
       background: url('/static/img/sprite.png') 0px -@iconography-size*3;
     }
-    & > a.nav-search > span.iconography {
+    & > a.nav-search {
       background: url('/static/img/sprite.png') 0px -@iconography-size*4;
     }
-    & > a.nav-basket > span.iconography {
+    & > a.nav-basket {
       background: url('/static/img/sprite.png') 0px -@iconography-size*5;
     }
     & > a{

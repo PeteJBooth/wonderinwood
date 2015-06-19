@@ -8333,38 +8333,34 @@ input[type="number"][id*="quantity"] {
   width: 16.66666667%;
   list-style: none;
 }
-#top-navigation li a {
-  float: none;
+#top-navigation li a.iconography {
+  box-sizing: border-box;
+  display: inline-block;
   padding: 10px 15px 10px;
   color: #777777;
   text-decoration: none;
   text-shadow: 0 1px 0 #ffffff;
+  height: 23px;
+  width: 23px;
+  position: relative;
+  top: 7px;
 }
-#top-navigation li > a > span.iconography {
-  background-repeat: no-repeat;
-  display: inline-block;
-  margin: 10px 5px 0 5px;
-  padding: 0 0 0 28px;
-  width: 100%;
-  height: 22px;
-  text-align: left;
-}
-#top-navigation li > a.nav-home > span.iconography {
+#top-navigation li > a.nav-home {
   background: url('/static/img/sprite.png') 0px 0px;
 }
-#top-navigation li > a.nav-store > span.iconography {
+#top-navigation li > a.nav-store {
   background: url('/static/img/sprite.png') 0px -23px;
 }
-#top-navigation li > a.nav-about > span.iconography {
+#top-navigation li > a.nav-about {
   background: url('/static/img/sprite.png') 0px -46px;
 }
-#top-navigation li > a.nav-contact > span.iconography {
+#top-navigation li > a.nav-contact {
   background: url('/static/img/sprite.png') 0px -69px;
 }
-#top-navigation li > a.nav-search > span.iconography {
+#top-navigation li > a.nav-search {
   background: url('/static/img/sprite.png') 0px -92px;
 }
-#top-navigation li > a.nav-basket > span.iconography {
+#top-navigation li > a.nav-basket {
   background: url('/static/img/sprite.png') 0px -115px;
 }
 .promotion_single {
