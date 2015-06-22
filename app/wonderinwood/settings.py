@@ -376,3 +376,19 @@ class DevSettings(BaseSettings):
 
     # In dev, do not actually send emails - instead print them to the console.
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
+class LiveSettings(DevSettings):
+
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'wonderinwood',
+            'USER': 'wonderinwood',
+            'PASSWORD': _get_env_variable('POSTGRES_PASSWORD', default='vagrant'),
+            'HOST': 'localhost',
+            'PORT': '',
+        }
+    }
+    #wonderinwood
+    #7WJJfPOe
