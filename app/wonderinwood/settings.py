@@ -126,7 +126,7 @@ class BaseSettings(Configuration):
 
     ########## STATIC FILE CONFIGURATION
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#static-root
-    STATIC_ROOT = normpath(join(SITE_ROOT, 'assets/static'))
+    STATIC_ROOT = normpath(join(SITE_ROOT, 'static'))
 
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#static-url
     STATIC_URL = '/static/'
@@ -378,7 +378,13 @@ class DevSettings(BaseSettings):
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 
-class LiveSettings(DevSettings):
+class LiveSettings(BaseSettings):
+
+    DEBUG = True
+    TEMPLATE_DEBUG = DEBUG
+
+    MIDDLEWARE_CLASSES = copy.deepcopy(BaseSettings.MIDDLEWARE_CLASSES)
+    INSTALLED_APPS = copy.deepcopy(BaseSettings.INSTALLED_APPS)
 
     DATABASES = {
         'default': {
@@ -390,5 +396,3 @@ class LiveSettings(DevSettings):
             'PORT': '',
         }
     }
-    #wonderinwood
-    #7WJJfPOe

@@ -3,11 +3,11 @@
 	    <div class="container-fluid text-center red-bars">
 			<ul id="top-navigation">
 			    <li><a href="/" class="nav-home iconography" ></a><a href="/" >Home</a></li>
-			    <li><a href="{% url 'catalogue:index' %}" class="nav-store iconography" ></a><a href="/" >Store</a></li>
+			    <li><a href="{% url 'catalogue:index' %}" class="nav-store iconography" ></a><a href="{% url 'catalogue:index' %}" >Store</a></li>
 			    <li><a href="/" class="nav-about iconography" ></a><a href="/" >About Us</a></li>
 			    <li><a href="/" class="nav-contact iconography" ></a><a href="/" >Contact</a></li>
 			    <li><a href="/" class="nav-search iconography" ></a><a href="/" >Search</a></li>
-			    <li><a href="{% url 'basket:summary' %}" class="nav-basket iconography" ></a><a href="/" >My Basket</a></li>
+			    <li><a href="{% url 'basket:summary' %}" class="nav-basket iconography" ></a><a href="{% url 'basket:summary' %}" >My Basket</a></li>
 			</ul>
 		</div>
 	</div>
