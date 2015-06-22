@@ -10,9 +10,6 @@ from django.core.exceptions import ImproperlyConfigured
 
 # third party
 from configurations import Configuration
-from oscar import get_core_apps
-from oscar import OSCAR_MAIN_TEMPLATE_DIR
-from oscar.defaults import *
 
 # Reinclude this variables if you wish to use multiple languages
 # gettext = lambda s: s
@@ -180,6 +177,7 @@ class BaseSettings(Configuration):
     )
 
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#template-dirs
+    from oscar import OSCAR_MAIN_TEMPLATE_DIR
     TEMPLATE_DIRS = (
         normpath(join(SITE_ROOT, 'templates')),
         OSCAR_MAIN_TEMPLATE_DIR,
@@ -246,7 +244,7 @@ class BaseSettings(Configuration):
     LOCAL_APPS = [
         #'wonderinwood',
     ]
-
+    from oscar import get_core_apps
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
     INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS + get_core_apps()
     ########## END APP CONFIGURATION
@@ -342,6 +340,7 @@ class BaseSettings(Configuration):
             'ENGINE': 'haystack.backends.simple_backend.SimpleEngine',
         },
     }
+    from oscar.defaults import *
 
     OSCAR_SHOP_NAME = "Wonder in Wood"
     OSCAR_SHOP_TAGLINE = "The German Christmas Shop"
