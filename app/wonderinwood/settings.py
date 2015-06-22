@@ -244,7 +244,7 @@ class BaseSettings(Configuration):
 
     # Apps specific for this project go here.
     LOCAL_APPS = [
-        'wonderinwood',
+        #'wonderinwood',
     ]
 
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -385,6 +385,8 @@ class LiveSettings(BaseSettings):
 
     MIDDLEWARE_CLASSES = copy.deepcopy(BaseSettings.MIDDLEWARE_CLASSES)
     INSTALLED_APPS = copy.deepcopy(BaseSettings.INSTALLED_APPS)
+
+    STATIC_ROOT = '/home/petejbooth/webapps/wonderinwood_static'
 
     DATABASES = {
         'default': {
