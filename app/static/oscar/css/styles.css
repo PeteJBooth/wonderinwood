@@ -201,19 +201,19 @@ textarea {
 }
 body {
   margin: 0;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 12px;
+  font-family: "EB Garamond", serif;
+  font-size: 16px;
   line-height: 20px;
   color: #333333;
   background-color: #ffffff;
 }
 a {
-  color: #0088cc;
+  color: #000000;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #005580;
+  color: #808080;
   text-decoration: underline;
 }
 .img-rounded {
@@ -596,7 +596,7 @@ p {
 }
 .lead {
   margin-bottom: 20px;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 200;
   line-height: 30px;
 }
@@ -685,34 +685,34 @@ h3 {
   line-height: 40px;
 }
 h1 {
-  font-size: 33px;
+  font-size: 44px;
 }
 h2 {
-  font-size: 27px;
+  font-size: 36px;
 }
 h3 {
-  font-size: 21px;
+  font-size: 28px;
 }
 h4 {
-  font-size: 15px;
+  font-size: 20px;
 }
 h5 {
-  font-size: 12px;
+  font-size: 16px;
 }
 h6 {
-  font-size: 10.2px;
+  font-size: 13.6px;
 }
 h1 small {
-  font-size: 21px;
+  font-size: 28px;
 }
 h2 small {
-  font-size: 15px;
+  font-size: 20px;
 }
 h3 small {
-  font-size: 12px;
+  font-size: 16px;
 }
 h4 small {
-  font-size: 12px;
+  font-size: 16px;
 }
 .page-header {
   padding-bottom: 9px;
@@ -811,7 +811,7 @@ blockquote {
 }
 blockquote p {
   margin-bottom: 0;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 300;
   line-height: 1.25;
 }
@@ -856,7 +856,7 @@ code,
 pre {
   padding: 0 3px 2px;
   font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
-  font-size: 10px;
+  font-size: 14px;
   color: #333333;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -874,7 +874,7 @@ pre {
   display: block;
   padding: 9.5px;
   margin: 0 0 10px;
-  font-size: 11px;
+  font-size: 15px;
   line-height: 20px;
   word-break: break-all;
   word-wrap: break-word;
@@ -916,7 +916,7 @@ legend {
   width: 100%;
   padding: 0;
   margin-bottom: 20px;
-  font-size: 18px;
+  font-size: 24px;
   line-height: 40px;
   color: #333333;
   border: 0;
@@ -931,7 +931,7 @@ input,
 button,
 select,
 textarea {
-  font-size: 12px;
+  font-size: 16px;
   font-weight: normal;
   line-height: 20px;
 }
@@ -939,7 +939,7 @@ input,
 button,
 select,
 textarea {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "EB Garamond", serif;
 }
 label {
   display: block;
@@ -966,7 +966,7 @@ input[type="color"],
   height: 20px;
   padding: 4px 6px;
   margin-bottom: 10px;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 20px;
   color: #555555;
   -moz-border-radius: 4px;
@@ -1479,7 +1479,7 @@ select:focus:invalid:focus {
 .input-prepend .dropdown-menu,
 .input-append .popover,
 .input-prepend .popover {
-  font-size: 12px;
+  font-size: 16px;
 }
 .input-append input,
 .input-prepend input,
@@ -1511,7 +1511,7 @@ select:focus:invalid:focus {
   height: 20px;
   min-width: 16px;
   padding: 4px 5px;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: normal;
   line-height: 20px;
   text-align: center;
@@ -4775,14 +4775,14 @@ a .icon-flip-vertical:before {
 .dropdown-submenu:focus > a {
   text-decoration: none;
   color: #ffffff;
-  background-color: #0081c2;
-  background-image: -moz-linear-gradient(top, #0088cc, #0077b3);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0077b3));
-  background-image: -webkit-linear-gradient(top, #0088cc, #0077b3);
-  background-image: -o-linear-gradient(top, #0088cc, #0077b3);
-  background-image: linear-gradient(to bottom, #0088cc, #0077b3);
+  background-color: #000000;
+  background-image: -moz-linear-gradient(top, #000000, #000000);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#000000), to(#000000));
+  background-image: -webkit-linear-gradient(top, #000000, #000000);
+  background-image: -o-linear-gradient(top, #000000, #000000);
+  background-image: linear-gradient(to bottom, #000000, #000000);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0077b3', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff000000', endColorstr='#ff000000', GradientType=0);
 }
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
@@ -4790,14 +4790,14 @@ a .icon-flip-vertical:before {
   color: #ffffff;
   text-decoration: none;
   outline: 0;
-  background-color: #0081c2;
-  background-image: -moz-linear-gradient(top, #0088cc, #0077b3);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0077b3));
-  background-image: -webkit-linear-gradient(top, #0088cc, #0077b3);
-  background-image: -o-linear-gradient(top, #0088cc, #0077b3);
-  background-image: linear-gradient(to bottom, #0088cc, #0077b3);
+  background-color: #000000;
+  background-image: -moz-linear-gradient(top, #000000, #000000);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#000000), to(#000000));
+  background-image: -webkit-linear-gradient(top, #000000, #000000);
+  background-image: -o-linear-gradient(top, #000000, #000000);
+  background-image: linear-gradient(to bottom, #000000, #000000);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0077b3', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff000000', endColorstr='#ff000000', GradientType=0);
 }
 .dropdown-menu > .disabled > a,
 .dropdown-menu > .disabled > a:hover,
@@ -4987,7 +4987,7 @@ button.close {
   *zoom: 1;
   padding: 4px 12px;
   margin-bottom: 0;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 20px;
   text-align: center;
   vertical-align: middle;
@@ -5072,7 +5072,7 @@ button.close {
 }
 .btn-large {
   padding: 11px 19px;
-  font-size: 15px;
+  font-size: 20px;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
   border-radius: 6px;
@@ -5084,7 +5084,7 @@ button.close {
 }
 .btn-small {
   padding: 2px 10px;
-  font-size: 10.2px;
+  font-size: 13.6px;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
@@ -5100,7 +5100,7 @@ button.close {
 }
 .btn-mini {
   padding: 0 6px;
-  font-size: 9px;
+  font-size: 12px;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
@@ -5134,17 +5134,17 @@ input[type="button"].btn-block {
 .btn-primary {
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #006dcc;
-  background-image: -moz-linear-gradient(top, #0088cc, #0044cc);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0044cc));
-  background-image: -webkit-linear-gradient(top, #0088cc, #0044cc);
-  background-image: -o-linear-gradient(top, #0088cc, #0044cc);
-  background-image: linear-gradient(to bottom, #0088cc, #0044cc);
+  background-color: #000000;
+  background-image: -moz-linear-gradient(top, #000000, #000000);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#000000), to(#000000));
+  background-image: -webkit-linear-gradient(top, #000000, #000000);
+  background-image: -o-linear-gradient(top, #000000, #000000);
+  background-image: linear-gradient(to bottom, #000000, #000000);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0044cc', GradientType=0);
-  border-color: #0044cc #0044cc #002a80;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff000000', endColorstr='#ff000000', GradientType=0);
+  border-color: #000000 #000000 #000000;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #0044cc;
+  *background-color: #000000;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
@@ -5155,12 +5155,12 @@ input[type="button"].btn-block {
 .btn-primary.disabled,
 .btn-primary[disabled] {
   color: #ffffff;
-  background-color: #0044cc;
-  *background-color: #003bb3;
+  background-color: #000000;
+  *background-color: #000000;
 }
 .btn-primary:active,
 .btn-primary.active {
-  background-color: #003399 \9;
+  background-color: #000000 \9;
 }
 .btn-warning {
   color: #ffffff;
@@ -5354,7 +5354,7 @@ input[type="submit"].btn.btn-mini {
 .btn-link {
   border-color: transparent;
   cursor: pointer;
-  color: #0088cc;
+  color: #000000;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
@@ -5362,7 +5362,7 @@ input[type="submit"].btn.btn-mini {
 }
 .btn-link:hover,
 .btn-link:focus {
-  color: #005580;
+  color: #808080;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -5411,16 +5411,16 @@ input[type="submit"].btn.btn-mini {
 .btn-group > .btn,
 .btn-group > .dropdown-menu,
 .btn-group > .popover {
-  font-size: 12px;
+  font-size: 16px;
 }
 .btn-group > .btn-mini {
-  font-size: 9px;
+  font-size: 12px;
 }
 .btn-group > .btn-small {
-  font-size: 10.2px;
+  font-size: 13.6px;
 }
 .btn-group > .btn-large {
-  font-size: 15px;
+  font-size: 20px;
 }
 .btn-group > .btn:first-child {
   margin-left: 0;
@@ -5503,7 +5503,7 @@ input[type="submit"].btn.btn-mini {
   background-color: #e6e6e6;
 }
 .btn-group.open .btn-primary.dropdown-toggle {
-  background-color: #0044cc;
+  background-color: #000000;
 }
 .btn-group.open .btn-warning.dropdown-toggle {
   background-color: #f89406;
@@ -5722,7 +5722,7 @@ input[type="submit"].btn.btn-mini {
 .nav-list > .active > a:focus {
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
-  background-color: #0088cc;
+  background-color: #000000;
 }
 .nav-list [class^="icon-"],
 .nav-list [class*=" icon-"] {
@@ -5807,7 +5807,7 @@ input[type="submit"].btn.btn-mini {
 .nav-pills > .active > a:hover,
 .nav-pills > .active > a:focus {
   color: #ffffff;
-  background-color: #0088cc;
+  background-color: #000000;
 }
 .nav-stacked > li {
   float: none;
@@ -5865,14 +5865,14 @@ input[type="submit"].btn.btn-mini {
   background-clip: padding-box;
 }
 .nav .dropdown-toggle .caret {
-  border-top-color: #0088cc;
-  border-bottom-color: #0088cc;
+  border-top-color: #000000;
+  border-bottom-color: #000000;
   margin-top: 6px;
 }
 .nav .dropdown-toggle:hover .caret,
 .nav .dropdown-toggle:focus .caret {
-  border-top-color: #005580;
-  border-bottom-color: #005580;
+  border-top-color: #808080;
+  border-bottom-color: #808080;
 }
 /* move down carets for tabs */
 .nav-tabs .dropdown-toggle .caret {
@@ -6161,7 +6161,7 @@ input[type="submit"].btn.btn-mini {
 .navbar-search .search-query {
   margin-bottom: 0;
   padding: 4px 14px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 13px;
   font-weight: normal;
   line-height: 1;
@@ -6653,7 +6653,7 @@ input[type="submit"].btn.btn-mini {
 .pagination-large ul > li > a,
 .pagination-large ul > li > span {
   padding: 11px 19px;
-  font-size: 15px;
+  font-size: 20px;
 }
 .pagination-large ul > li:first-child > a,
 .pagination-large ul > li:first-child > span {
@@ -6698,12 +6698,12 @@ input[type="submit"].btn.btn-mini {
 .pagination-small ul > li > a,
 .pagination-small ul > li > span {
   padding: 2px 10px;
-  font-size: 10.2px;
+  font-size: 13.6px;
 }
 .pagination-mini ul > li > a,
 .pagination-mini ul > li > span {
   padding: 0 6px;
-  font-size: 9px;
+  font-size: 12px;
 }
 .pager {
   margin: 20px 0;
@@ -7105,7 +7105,7 @@ input[type="submit"].btn.btn-mini {
 }
 a.thumbnail:hover,
 a.thumbnail:focus {
-  border-color: #0088cc;
+  border-color: #000000;
   -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   -webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
@@ -7153,7 +7153,7 @@ a.thumbnail:focus {
 .badge {
   display: inline-block;
   padding: 2px 4px;
-  font-size: 10.152px;
+  font-size: 13.536px;
   font-weight: bold;
   line-height: 14px;
   color: #ffffff;
@@ -7688,27 +7688,27 @@ ol {
 }
 h1,
 .h1 {
-  font-size: 25.8px;
+  font-size: 34.4px;
   line-height: 40px;
 }
 h2,
 .h2 {
-  font-size: 21px;
+  font-size: 28px;
   line-height: 40px;
 }
 h3,
 .h3 {
-  font-size: 15px;
+  font-size: 20px;
   line-height: 24px;
 }
 h4,
 .h4 {
-  font-size: 13.8px;
+  font-size: 18.4px;
   line-height: 24px;
 }
 h5,
 .h5 {
-  font-size: 12px;
+  font-size: 16px;
   line-height: 20px;
 }
 .sub-header {
@@ -7717,13 +7717,13 @@ h5,
 }
 .page-header h1,
 .page-header h2 {
-  font-size: 25.68px;
+  font-size: 34.24px;
   line-height: 40px;
 }
 .sub-header h2,
 .sub-header h3,
 .sub-header h4 {
-  font-size: 19.2px;
+  font-size: 25.6px;
   line-height: 30px;
   font-weight: normal;
   color: #333333;
@@ -7840,7 +7840,7 @@ form.flat {
   padding: 0;
 }
 .basket-mini-item a {
-  color: #0088cc;
+  color: #000000;
   font-weight: inherit;
   white-space: normal;
 }
@@ -7878,12 +7878,12 @@ ul.row-fluid {
   margin-bottom: 0;
 }
 .product_pod h3 {
-  font-size: 12px;
+  font-size: 16px;
   line-height: 20px;
   margin-bottom: 0;
 }
 .product_pod .price_color {
-  font-size: 13.8px;
+  font-size: 18.4px;
   line-height: 24px;
 }
 .product_pod .availability,
@@ -7916,7 +7916,7 @@ ul.row-fluid {
   margin: 0px auto;
 }
 a:hover .thumbnail {
-  border-color: #0088cc;
+  border-color: #000000;
   -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   -webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
@@ -8070,11 +8070,11 @@ a:hover .thumbnail {
   max-height: 200px;
 }
 .sidebar .promotion_single h2 {
-  font-size: 15px;
+  font-size: 20px;
   line-height: 24px;
 }
 .sidebar .promotion_single h3 {
-  font-size: 12px;
+  font-size: 16px;
   line-height: 20px;
 }
 .sidebar .promotion_single .row-fluid > [class*="span"] {
@@ -8110,7 +8110,7 @@ input[type="number"][id*="quantity"] {
   margin-right: auto;
 }
 .basket-items .price_color {
-  font-size: 13.8px;
+  font-size: 18.4px;
   line-height: 24px;
   font-weight: bold;
 }
@@ -8363,6 +8363,10 @@ input[type="number"][id*="quantity"] {
 #top-navigation li > a.nav-basket {
   background: url('/static/img/sprite.png') 0px -115px;
 }
+#top-navigation li:hover a.iconography {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
 .promotion_single {
   position: relative;
   height: 236px;
@@ -8429,6 +8433,8 @@ input[type="number"][id*="quantity"] {
   margin: 20px;
 }
 #footer {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 14px;
   background-color: #eeeeee;
 }
 #footer #footer-payments li {
