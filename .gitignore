@@ -60,3 +60,6 @@ static_src/bower_components/**/*
 */static_src/img/svgs/sprite.inline.svg
 */app/templates/includes/svgs/sprite.inline.html
 */app/templates/includes/svgs/sprite/sprite.html
+
+#apache config
+apache2
