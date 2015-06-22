@@ -63,3 +63,6 @@ static_src/bower_components/**/*
 
 #apache config
 apache2
+
+#virtualenv
+venv
