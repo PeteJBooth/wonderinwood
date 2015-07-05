@@ -65,33 +65,31 @@
   margin-bottom: 0;
   position:relative;
 
-  .child-container {
-    position:relative;
-  }
-
   div.link_container {
+    position:relative;
     padding: 14px 0 14px 0;
     list-style:none;
     border-top: solid 1px #c6c6c6;
     
     .nav_idents(5)
   }
-  div:first-child > .link_container{
+  & > div.link_container:first-child {
     border:none;
   }
 
   a.nav-arrow{
       box-sizing: border-box;
+      cursor:pointer;
       display: inline-block;
       height: 23px;
       width: 23px;
       position: absolute;
       top: 13px;
       right: 0px;
-      background: url('/static/img/sprite.png') 0px -161px;
+      background: url('/static/img/sprite.png') 0px -185px;
 
       &.closed {
-        background: url('/static/img/sprite.png') 0px -185px;
+        background: url('/static/img/sprite.png') 0px -161px;
       }
     }
 }

@@ -18,17 +18,19 @@
         <div class="side_categories">
             <div class="nav nav-list">
                 {% for tree_category, info in tree_categories %}
-                    <div class="category-container">
                     {% if tree_category.pk == category.pk %}
-                        <div class="link_container level_{{ info.level }}"><strong>{{ tree_category.name }}</strong></div>
-                        {% if info.has_children %}<a class="nav-arrow open"></a>{% endif %}
+                        <div id="cat-{{tree_category.pk}}" class="link_container level_{{ info.level }} current">
+                            <strong>{{ tree_category.name }}</strong>
+                            {% if info.has_children %}<a class="nav-arrow open"></a>{% endif %}
+                        </div>
                     {% else %}
-                        <div class="link_container level_{{ info.level }}"><a href="{{ tree_category.get_absolute_url }}">{{ tree_category.name }}</a>
-                        {% if info.has_children %}<a class="nav-arrow"></a>{% endif %}
+                        <div id="cat-{{tree_category.pk}}" class="link_container level_{{ info.level }}">
+                            <a href="{{ tree_category.get_absolute_url }}">{{ tree_category.name }}</a>
+                            {% if info.has_children %}<a class="nav-arrow"></a>{% endif %}
                         </div>
                     {% endif %}
 
-                    {% if info.has_children %}<div class="child-container"{% else %}</div>{% endif %}
+                    {% if info.has_children %}<div data-child-of="{{tree_category.pk}}" class="child-container">{% endif %}
                     {% for n in info.num_to_close %}
                         </div>
                     {% endfor %}

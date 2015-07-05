@@ -5702,10 +5702,8 @@ input[type="submit"].btn.btn-mini {
   margin-bottom: 0;
   position: relative;
 }
-.nav-list .child-container {
-  position: relative;
-}
 .nav-list div.link_container {
+  position: relative;
   padding: 14px 0 14px 0;
   list-style: none;
   border-top: solid 1px #c6c6c6;
@@ -5728,21 +5726,22 @@ input[type="submit"].btn.btn-mini {
 .nav-list div.link_container.level_0 {
   padding-left: 0px;
 }
-.nav-list div:first-child > .link_container {
+.nav-list > div.link_container:first-child {
   border: none;
 }
 .nav-list a.nav-arrow {
   box-sizing: border-box;
+  cursor: pointer;
   display: inline-block;
   height: 23px;
   width: 23px;
   position: absolute;
   top: 13px;
   right: 0px;
-  background: url('/static/img/sprite.png') 0px -161px;
+  background: url('/static/img/sprite.png') 0px -185px;
 }
 .nav-list a.nav-arrow.closed {
-  background: url('/static/img/sprite.png') 0px -185px;
+  background: url('/static/img/sprite.png') 0px -161px;
 }
 .nav-list > li > a,
 .nav-list .nav-header {
