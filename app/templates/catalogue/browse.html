@@ -10,37 +10,30 @@
     {% if summary %}{{ summary }} |{% endif %} {{ block.super }}
 {% endblock %}
 
-{% block headertext %}{{ summary }}{% endblock %}
-
-{% block breadcrumbs %}
-    <ul class="breadcrumb">
-        <li>
-            <a href="{{ homepage_url }}">{% trans "Home" %}</a>
-        </li>
-        <li class="active">{{ summary }}</li>
-    </ul>
-{% endblock breadcrumbs %}
+{% block headertext %}Store{% endblock %}
 
 {% block column_left %}
     {% category_tree as tree_categories %}
     {% if tree_categories %}
-        <h4>{% trans "Show results for" %}</h4>
         <div class="side_categories">
-            <ul class="nav nav-list">
+            <div class="nav nav-list">
                 {% for tree_category, info in tree_categories %}
-                    <li>
+                    <div class="category-container">
                     {% if tree_category.pk == category.pk %}
-                        <strong>{{ tree_category.name }}</strong>
+                        <div class="link_container level_{{ info.level }}"><strong>{{ tree_category.name }}</strong></div>
+                        {% if info.has_children %}<a class="nav-arrow open"></a>{% endif %}
                     {% else %}
-                        <a href="{{ tree_category.get_absolute_url }}">{{ tree_category.name }}</a>
+                        <div class="link_container level_{{ info.level }}"><a href="{{ tree_category.get_absolute_url }}">{{ tree_category.name }}</a>
+                        {% if info.has_children %}<a class="nav-arrow"></a>{% endif %}
+                        </div>
                     {% endif %}
 
-                    {% if info.has_children %}<ul>{% else %}</li>{% endif %}
+                    {% if info.has_children %}<div class="child-container"{% else %}</div>{% endif %}
                     {% for n in info.num_to_close %}
-                        </ul></li>
+                        </div>
                     {% endfor %}
                 {% endfor %}
-            </ul>
+            </div>
         </div>
     {% endif %}
     {% if has_facets %}
@@ -68,9 +61,7 @@
 
         {% if paginator.count %}
             {% if paginator.num_pages > 1 %}
-                {% blocktrans with start=page_obj.start_index end=page_obj.end_index count num_results=paginator.count %}
-                    <strong>{{ num_results }}</strong> result - showing <strong>{{ start }}</strong> to <strong>{{ end }}</strong>.
-                {% plural %}
+                {% blocktrans with start=page_obj.start_index end=page_obj.end_index num_results=paginator.count %}
                     <strong>{{ num_results }}</strong> results - showing <strong>{{ start }}</strong> to <strong>{{ end }}</strong>.
                 {% endblocktrans %}
             {% else %}
@@ -95,9 +86,9 @@
     {% if products %}
         <section>
             <div>
-                <ol class="row">
+                <ol class="row-fluid">
                     {% for product in products %}
-                        <li class="col-xs-6 col-sm-4 col-md-3 col-lg-3">{% render_product product %}</li>
+                        <li class="span3 {% if forloop.counter0|divisibleby:"4" %}no-margin{% endif %}">{% render_product product %}</li>
                     {% endfor %}
                 </ol>
                 {% include "partials/pagination.html" %}

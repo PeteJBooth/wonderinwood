@@ -10,6 +10,7 @@
   margin-left: 0;
   margin-bottom: @baseLineHeight;
   list-style: none;
+  font-family: @sansFontFamily;
 }
 
 // Make links block level
@@ -53,11 +54,46 @@
 
 // NAV LIST
 // --------
-
+.nav_idents(@counter) when (@counter >= 0) {
+  &.level_@{counter} {
+    padding-left: (20px * @counter);
+  }
+  .nav_idents((@counter - 1));    // next iteration
+}
 .nav-list {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0px;
   margin-bottom: 0;
+  position:relative;
+
+  .child-container {
+    position:relative;
+  }
+
+  div.link_container {
+    padding: 14px 0 14px 0;
+    list-style:none;
+    border-top: solid 1px #c6c6c6;
+    
+    .nav_idents(5)
+  }
+  div:first-child > .link_container{
+    border:none;
+  }
+
+  a.nav-arrow{
+      box-sizing: border-box;
+      display: inline-block;
+      height: 23px;
+      width: 23px;
+      position: absolute;
+      top: 13px;
+      right: 0px;
+      background: url('/static/img/sprite.png') 0px -161px;
+
+      &.closed {
+        background: url('/static/img/sprite.png') 0px -185px;
+      }
+    }
 }
 .nav-list > li > a,
 .nav-list .nav-header {

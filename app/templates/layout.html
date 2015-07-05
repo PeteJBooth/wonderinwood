@@ -6,26 +6,29 @@
 {% block mainstyles %}
     {% block styles %}
         {% compress css %}
+            <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+            <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
             {% if use_less %}
                 <link rel="stylesheet" type="text/less" href="{% static "oscar/less/styles.less" %}" />
+                <link rel="stylesheet" type="text/less" href="{% static "oscar/less/responsive.less" %}" />
             {% else %}
                 <link rel="stylesheet" type="text/css" href="{% static "oscar/css/styles.css" %}" />
+                <link rel="stylesheet" type="text/css" href="{% static "oscar/css/responsive.css" %}" />
             {% endif %}
+
         {% endcompress %}
     {% endblock %}
 {% endblock %}
 
 {% block layout %}
     {# Top-horizontal bar with account, notifictions, dashboard links #}
-    {% include "partials/nav_accounts.html" %}
+    {% comment %}{% include "partials/nav_accounts.html" %}{% endcomment %}
 
     {# Site logo/title, mini-basket, browse dropdown and searchbox #}
     <header class="header container-fluid">
         <div class="page_inner">
             <div class="row">
                 {% include "partials/brand.html" %}
-                {# Mini-basket wrapped in a block so some templates can now display it #}
-                {% block mini_basket %}{% include "partials/mini_basket.html" %}{% endblock %}
             </div>
         </div>
         {% block navigation %}
@@ -34,8 +37,8 @@
     </header>
 
     {# Main content of page - other layout templates may override this block #}
-    {% block content_wrapper %}
-        <div class="container-fluid page">
+    <div class="page">
+        {% block content_wrapper %}
             <div class="page_inner">
                 {% block breadcrumbs %}{% endblock %}
                 {% block header %}
@@ -59,10 +62,11 @@
                     <div id="content_inner">{% block content %}{% endblock %}</div>
                 </div>
             </div>
-        </div>
-    {% endblock %}
+        {% endblock %}
+        {% include "partials/footer.html" %}
+    </div>
 
-    {% include "partials/footer.html" %}
+    
 {% endblock %}
 
 {# Local scripts #}
