@@ -92,7 +92,7 @@
             <div>
                 <ol class="row-fluid">
                     {% for product in products %}
-                        <li class="span4 {% if forloop.counter0|divisibleby:"4" %}no-margin{% endif %}">{% render_product product %}</li>
+                        <li class="span4 {% if forloop.counter0|divisibleby:"3" %}no-margin{% endif %}">{% render_product product %}</li>
                     {% endfor %}
                 </ol>
                 {% include "partials/pagination.html" %}
