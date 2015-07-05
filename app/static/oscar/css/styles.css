@@ -8446,6 +8446,69 @@ input[type="number"][id*="quantity"] {
 .promotion_single:hover .overlay {
   top: -236px;
 }
+.product_pod {
+  position: relative;
+  height: 225px;
+  margin: 0 0 20px 0;
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+}
+.product_pod .overlay {
+  padding: 10px 5%;
+  margin: 225px 0 0 0;
+  position: absolute;
+  top: 0px;
+  color: #ffffff;
+  font-size: 17px;
+  width: 90%;
+  height: 205px;
+  background-color: rgba(73, 73, 73, 0.7);
+  text-align: left;
+  -webkit-transition: 500ms;
+  -moz-transition: 500ms;
+  -o-transition: 500ms;
+  -ms-transition: 500ms;
+  transition: 500ms;
+  -webkit-transition-property: top;
+  -moz-transition-property: top;
+  -o-transition-property: top;
+  -ms-transition-property: top;
+  transition-property: top;
+}
+.product_pod .overlay a.find-out-more {
+  box-sizing: border-box;
+  color: #ffffff;
+  background-color: #ae911c;
+  font-weight: bold;
+  font-size: 15px;
+  display: block;
+  height: 32px;
+  width: 90%;
+  padding: 6px 10px 14px 10px;
+  position: absolute;
+  bottom: 14px;
+  text-align: left;
+}
+.product_pod .overlay a.find-out-more .arrow {
+  display: block;
+  position: absolute;
+  right: 3px;
+  top: 5px;
+  width: 23px;
+  height: 23px;
+  background: url('/static/img/sprite.png') 0px -138px;
+}
+.product_pod:hover .overlay {
+  top: -225px;
+}
+.product_price > p {
+  font-size: 16px;
+  margin: 5px 0 5px 0;
+}
+.product_price > p.product_title {
+  font-size: 20px;
+}
 .hero-image {
   height: 350px;
   background-image: url('/static/img/hero.jpg');

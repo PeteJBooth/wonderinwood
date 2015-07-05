@@ -9,6 +9,7 @@ import copy
 from django.core.exceptions import ImproperlyConfigured
 
 # third party
+from oscar.defaults import *
 from configurations import Configuration
 
 # Reinclude this variables if you wish to use multiple languages
@@ -242,7 +243,7 @@ class BaseSettings(Configuration):
 
     # Apps specific for this project go here.
     LOCAL_APPS = [
-        #'wonderinwood',
+        'wonderinwood',
     ]
     from oscar import get_core_apps
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -340,7 +341,7 @@ class BaseSettings(Configuration):
             'ENGINE': 'haystack.backends.simple_backend.SimpleEngine',
         },
     }
-    from oscar.defaults import *
+    
 
     OSCAR_SHOP_NAME = "Wonder in Wood"
     OSCAR_SHOP_TAGLINE = "The German Christmas Shop"

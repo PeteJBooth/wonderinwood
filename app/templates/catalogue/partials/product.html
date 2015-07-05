@@ -1,0 +1,32 @@
+{% load reviews_tags %}
+{% load thumbnail %}
+{% load i18n %}
+{% load display_tags %}
+{% load staticfiles %}
+{% load wiw_extras %}
+
+{% block product %}
+    {% with image=product.primary_image %}
+    {% thumbnail image.original "225x225" upscale=True crop='center' as thumb %}
+    <article class="product_pod" style="background-image:url('{{ thumb.url }}')">
+        <div class="overlay">
+        {{ product.description|striptags|firstsentence }}
+        <a href="{{ product.get_absolute_url }}" alt="{{ product.get_title }}" class="find-out-more">FIND OUT MORE<span class="arrow"></span></a>
+        </div>
+
+
+    </article>
+    {% endthumbnail %}
+    {% endwith %}
+    {% block product_price %}
+        <div class="product_price">
+            <p class="product_title">{{ product.get_title }}</p>
+            {% include "catalogue/partials/stock_record.html" %}
+            {% comment %}
+            {% if not product.is_parent %}
+                {% include "catalogue/partials/add_to_basket_form_compact.html" %}
+            {% endif %}{% endcomment %}
+
+        </div>
+    {% endblock %}
+{% endblock %}
